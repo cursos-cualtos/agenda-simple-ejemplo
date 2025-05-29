@@ -2,7 +2,7 @@ from agenda import Agenda
 from contacto import Contacto
 
 agenda = Agenda('nueva_agenda')
-contactos = agenda.obtenerContactos()
+contactos = agenda.obtener_contactos()
 
 def mostrar_menu():
     print("Bienvenido a Agenda Simple")
@@ -15,7 +15,7 @@ def mostrar_menu():
     print("=" * 20)
 
 def mostrar_agenda(agenda):
-    for contacto in agenda.mostrarContactos():
+    for contacto in agenda.mostrar_contactos():
         for campo, dato in contacto.items():
             print(campo, "=", dato)
         print("-" * 15)
@@ -33,7 +33,7 @@ def crear_contacto(agenda):
     datos['telefono'] = input("Ingrese el telefono: ")
     datos['nota'] = input("Ingrese nota: ")
     nuevo_contacto = Contacto(datos)
-    agenda.agregarContacto(nuevo_contacto)
+    agenda.agregar_contacto(nuevo_contacto)
 
 def crear_contacto_alt():
     nuevo_contacto = Contacto(input("Ingresa el nombre: "))
@@ -56,7 +56,7 @@ def ejecutar_opcion(opcion):
         elif opcion == 2:
             crear_contacto_alt()
         elif opcion == 3:
-            agenda.agregarContactos(contactos)
+            agenda.agregar_contactos(contactos)
             agenda.guardar()
             print("Agenda guardada correctamente.")
         elif opcion == 0:
@@ -65,7 +65,7 @@ def ejecutar_opcion(opcion):
             print("Agenda cerrada")
             exit()
 
-def validarSeleccion():
+def validar_seleccion():
     while True:
         try:
             seleccion = int(input("Ingrese opcion: "))
@@ -78,5 +78,5 @@ if __name__ == "__main__":
     seleccion = 'S'
     while(seleccion in  ['S', 's', 'Si', 'SI', 'si']):
         mostrar_menu()
-        ejecutar_opcion(validarSeleccion())
+        ejecutar_opcion(validar_seleccion())
         seleccion = input("Desea continuar? (S/N): ")

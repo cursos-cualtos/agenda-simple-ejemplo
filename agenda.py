@@ -37,7 +37,7 @@ class Agenda():
                 db.write(json.dumps(contacto))
                 db.write('\n')
 
-    def agregarContacto(self, contacto):
+    def agregar_contacto(self, contacto):
         if isinstance(contacto, dict):
             self.contactos.append(contacto)
         elif isinstance(contacto, Contacto):
@@ -45,7 +45,7 @@ class Agenda():
         else:
             raise TypeError
 
-    def agregarContactos(self, lista_contactos):
+    def agregar_contactos(self, lista_contactos):
         if isinstance(lista_contactos, list):
             self.contactos.clear()
             for contacto in lista_contactos:
@@ -54,17 +54,17 @@ class Agenda():
                 else:
                     raise TypeError
 
-    def mostrarContactos(self):
+    def mostrar_contactos(self):
         return self.contactos
 
-    def obtenerContacto(self, nombre):
+    def obtener_contacto(self, nombre):
         for contacto in self.contactos:
             if contacto['nombre'] == nombre:
                 return contacto.copy()
             else:
                 return {}
 
-    def obtenerContactos(self):
+    def obtener_contactos(self):
         lista_contactos = []
         for contacto in self.contactos:
             nuevo_contacto = Contacto(contacto)
