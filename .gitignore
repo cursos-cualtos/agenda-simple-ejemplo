@@ -1,2 +1,8 @@
-__pycache__/
-nueva_agenda.tdb
+src/agenda_simple/__pycache__/
+src/agenda_simple/nueva_agenda.tdb
+bin/
+include/
+lib/
+lib64
+dist/
+src/agenda_simple.egg-info/
