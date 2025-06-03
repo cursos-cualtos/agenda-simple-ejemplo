@@ -1,0 +1,1 @@
+x-terminal-emulator -e "python3 /home/diego/Development/agenda-temp/agenda_simple.py"
