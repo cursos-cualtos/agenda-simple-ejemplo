@@ -1,6 +1,6 @@
 import argparse
-from .agenda import Agenda
-from .contacto import Contacto
+from agenda import Agenda
+from contacto import Contacto
 
 agenda = Agenda('nueva_agenda')
 contactos = agenda.obtener_contactos()

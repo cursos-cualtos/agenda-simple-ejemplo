@@ -1,5 +1,8 @@
 import json
-from .contacto import Contacto
+try:
+    from contacto import Contacto
+except ImportError:
+    from agenda_simple.contacto import Contacto
 
 class Agenda():
     def __init__(self, nombre):

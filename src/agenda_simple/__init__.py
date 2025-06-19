@@ -1,5 +1,9 @@
-from agenda import Agenda
-from contacto import Contacto
+if __name__ == "__main__":
+    from agenda import Agenda
+    from contacto import Contacto
+else:
+    from .agenda import Agenda
+    from .contacto import Contacto
 
 agenda = Agenda('nueva_agenda')
 contactos = agenda.obtener_contactos()
@@ -74,9 +78,12 @@ def validar_seleccion():
             print("Error. Ingrese unicamente numeros enteros.")
     return seleccion
 
-if __name__ == "__main__":
+def main():
     seleccion = 'S'
     while(seleccion in  ['S', 's', 'Si', 'SI', 'si']):
         mostrar_menu()
         ejecutar_opcion(validar_seleccion())
         seleccion = input("Desea continuar? (S/N): ")
+
+if __name__ == "__main__":
+    main()
