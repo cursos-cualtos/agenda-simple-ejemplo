@@ -1,1 +1,1 @@
-x-terminal-emulator -e "python3 /home/diego/Development/agenda-temp/agenda_simple.py"
+x-terminal-emulator --hold -e "python3 /home/diego/Development/cursos-cualtos/agenda-simple/src/agenda_simple/__init__.py"
