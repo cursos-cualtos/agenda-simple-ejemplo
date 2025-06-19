@@ -1,5 +1,5 @@
 import json
-from contacto import Contacto
+from .contacto import Contacto
 
 class Agenda():
     def __init__(self, nombre):
